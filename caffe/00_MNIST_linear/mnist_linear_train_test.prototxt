@@ -1,0 +1,74 @@
+name: "MNIST Linear"
+layer {
+  name: "mnist"
+  type: "ImageData"
+  top: "data"
+  top: "label"
+  include { phase: TRAIN  }
+  transform_param {
+    scale: 0.00390625
+  }
+  image_data_param {
+    source: "/home/ubuntu/data/training/mnist/train/train.txt"
+    new_width: 28
+    new_height: 28
+    is_color: false
+    batch_size: 60
+    root_folder: "/home/ubuntu/data/training/mnist/"
+  }  
+}
+layer {
+  name: "mnist"
+  type: "ImageData"
+  top: "data"
+  top: "label"
+  include { phase: TEST }
+  transform_param {
+    scale: 0.00390625
+  }
+  image_data_param {
+    source: "/home/ubuntu/data/training/mnist/test/test.txt"
+    new_width: 28
+    new_height: 28
+    is_color: false
+    batch_size: 100
+    root_folder: "/home/ubuntu/data/training/mnist/"
+  }  
+}
+
+layer {
+  name: "ip2"
+  type: "InnerProduct"
+  bottom: "data"
+  top: "ip2"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 2
+  }
+  inner_product_param {
+    num_output: 10
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer {
+  name: "accuracy"
+  type: "Accuracy"
+  bottom: "ip2"
+  bottom: "label"
+  top: "accuracy"
+}
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "ip2"
+  bottom: "label"
+  top: "loss"
+}
