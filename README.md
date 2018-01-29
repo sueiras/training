@@ -2,14 +2,13 @@
 
 ## List of resources and use cases
 
-### Caffe examples
+### Caffe
     - Intro to caffe
     - 00_MNIST_linear
     - 01_MNIST_full_connect
     - 02_MNIST_Lenet
 
-### sklearn
-scikit learn examples (SKLEARN)
+### sklearn (scikit learn examples)
     - Basic classification model
     - Basic Regression model
     - Control overfit and hyperparameter optimization
