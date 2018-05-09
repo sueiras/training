@@ -32,7 +32,7 @@ Try to create an instance following the instructions here https://docs.aws.amazo
 ### AMI for deep learning with tensorflow 1.8:
 - region: Ireland
 - AMI id: ami-ced8edb7
-- Name: sueiras-tensorfloww-1.8
+- Name: sueiras-tensorflow-1.8
 
 ### ...
 
