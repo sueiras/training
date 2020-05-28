@@ -30,7 +30,7 @@ sudo apt-get install nvidia-390
 ```
 
 
-## Cuda
+## Cuda
 ```
 wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64-deb
 sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
@@ -71,6 +71,7 @@ conda install nb_conda
 
 conda create -n tf18 python=3.5
 source activate tf18
+
 conda install graphviz
 conda install pandas scikit-learn
 conda install jupyter
@@ -81,32 +82,8 @@ pip install Cython
 pip install pydot-ng
 pip install h5py
 
+pip install tensorflow-gpu==1.8
 ```
-
-
-
-## Install tensorflow models
-
-```
-sudo apt install protobuf-compiler
-git clone https://github.com/tensorflow/models
-```
-
-Solve the bugs:
-https://github.com/tensorflow/models/issues/3705#issuecomment-375563179
-https://github.com/tensorflow/models/issues/4047
-
-Follow the instructions in: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md
-
-
-### Download and uncompress a model
-```
-cd object_detection\models
-wget http://download.tensorflow.org/models/object_detection/faster_rcnn_inception_v2_coco_2018_01_28.tar.gz
-tar -zxvf faster_rcnn_inception_v2_coco_2018_01_28.tar.gz
-```
-
-
 
 
 ## Start jupyter at the beggining
@@ -120,7 +97,6 @@ crontab -e
 
 
 ## Configure jupyter
-
 ```
 # Create config
 jupyter notebook --generate-config
