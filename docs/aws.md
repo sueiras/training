@@ -4,9 +4,8 @@
 1.- Crearse una cuenta en AWS (hay que meter una tarjeta de crédito). Al crearse la cuenta se dispone de un año de ciertos servicios gratuitos. Se pueden levantar maquinas pequeñas gratis y probar a usar la plataforma casi sin coste (unos pocos centimos).
 
 ## Basic configuration
- Follow the next instructions https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html
- - Sign Up for AWS
-- Create an IAM User
+Follow the next instructions https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html
+- Sign Up for AWS
 - Create a Key Pair (download to local the key file)
 - Create a Security Group. Open ports 22, 6006 and 8888. 
 
@@ -31,12 +30,14 @@ Try to create an instance following the instructions here https://docs.aws.amazo
 
 ### AMI for deep learning with tensorflow 1.8:
 - region: Ireland
-- AMI id: ami-ced8edb7
-- Name: sueiras-tensorflow-1.8
+- AMI id: ami-8eb287f7
+- Name: sueiras-medical-images-02
 
-### ...
 
 ## Connect to AWS instances from windows using putty
+Read details here: 
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
+
+To download a portable version of putty: 
 https://portableapps.com/apps/internet/putty_portable
 
